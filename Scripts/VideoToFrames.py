@@ -1,6 +1,7 @@
 import os
 import cv2
 
+
 ##      GENERATING FRAMES
 cap = cv2.VideoCapture('/home/noy/Videos/desktop.mp4')
 # Get the bit rate and size
@@ -28,7 +29,7 @@ while cap.isOpened:
 ##      CREATING RGB TXT FILE (LIST)
 file_object = open('/home/noy/PycharmProjects/pilot/outputs/rgb.txt','w')
 Ostr = ''
-num = len(os.listdir('/home/noy/PycharmProjects/pilot/outputs'))
+num = len(os.listdir('/home/noy/PycharmProjects/pilot/outputs')) - 1
 for i in range(1,num+1):
     name = str(i)
     Ostr = Ostr + name + ' RGB' + name + '.png\n'
